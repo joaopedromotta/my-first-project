@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-context="estante">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+
+<body>
+
+    <!-- Barra de navegação -->
+
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a href="./index.html" class="cabecalho__logotipo">
+                TesteBOOK
+            </a>
+
+            <!-- Navegação entre paginas DESABILITADO -->
+
+            <!-- <div class="botoes__meio">
+                <ul class="lista-botoes">
+                    <li class="item-botao">
+                        <a href="./index.html" class="item__navegacao">
+                            <img src="./assets/imagens/pagina/home__icon.svg" alt="">
+                            Página Inicial
+                        </a>
+                    </li>
+
+                    <li class="item-botao">
+                        <a class="item__navegacao">
+                            <img src="./assets/imagens/pagina/books__icons.svg" alt="">
+                            Livros
+                        </a>
+                    </li>
+
+                    <li class="item-botao">
+                        <a href="./chapther.html" class="item__navegacao">
+                            <img src="./assets/imagens/pagina/dice__icon.svg" alt="">
+                            Aleatória
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
+
+
+            <div class="cabecalho__pesquisa">
+                <img src="./assets/imagens/pagina/search.svg" alt="">
+                <input type="search" id="buscador__livro" class="cabecalho__pesquisa-input" placeholder="Busque por um livro aqui">
+            </div>
+
+            <button class="cabecalho__publicar" id="botao__publicar">
+                Publicar livro
+            </button>
+
+        </nav>
+    </header>
+
+    <main class="corpo">
+        
+        <!-- Container de Historico -->
+        <aside class="historico">
+            <h2 class="historico__titulo">Historico</h2>
+            <hr>
+            <div id="historico__container">
+                <ul class="historico__lista" id="lista__historico">
+                    <!-- Espaço para colocar o itens de historico -->
+                </ul>
+            </div>
+        </aside>
+
+
+        <section class="secao__livros" id="secao__livros">
+            <h2 class="livros__titulo">Todos os livros disponíveis</h2>
+            <ul class="livros__lista" id="lista__livros">
+            <!-- Espaço para os itens livros -->
+            </ul>
+        </section>
+
+
+        <!-- Container de publicação de livros -->
+        <section class="secao__publicar hidden" id="container__publicacao">
+            <div class="publicar__container">
+                <div id="container__upload" class="publicar__esquerdo">
+                    Para colocar o seu livro, o livro precisa ser em pdf!
+                    <input type="file" id="upload__livro" accept=".pdf" id="input__test" required>
+                </div>
+                
+                <button class="btn__close" id="botao__fechar">
+                    <img src="./assets/imagens/pagina/close.svg" alt="Fechar" class="close__icon">
+                </button>
+                
+                <div class="publicar__direito">
+                    <form class="publicar__form" id="formulario__publi">
+                        <label for="titulo__nome">Título do livro</label>
+                        <input type="text" class="publicar__input" id="titulo__nome" name="title" placeholder="Digite o título" required>
+                        
+                        <label for="autor__nome">Autor do livro</label>
+                        <input type="text" class="publicar__input" id="autor__nome" name="author" placeholder="Digite o autor" required>
+                        
+                        <label for="publisher__nome">Publicadora</label>
+                        <input type="text" class="publicar__input" id="publisher__nome" name="publisher" placeholder="Digite a editora" required>
+                        
+                        <label for="capa__nome" class="publicar__imagem">
+                            Capa do livro
+                            <input type="file" class="publicar__input container--input" id="capa__nome" name="cover_image" accept=".jpg, .png">
+                        </label>
+                        
+                    </form>
+                    <button type="submit" class="publicar__enviar" id="enviar__livro">Publicar livro</button>
+                </div>
+            </div>          
+        </section>
+
+        <section class="secao__publicar desfoque" id="aviso">
+            <div class="container__warning">
+                <h2 class="warning__titulo">Aviso!</h2>
+                <hr>
+                <p class="warning__paragrafo">
+                    Esta página web foi desenvolvida exclusivamente para fins demonstrativos e exemplificativos. Todos os livros apresentados contêm apenas suas capas, sem qualquer conteúdo interno. Da mesma forma, quaisquer arquivos utilizados, como PDFs, são meramente ilustrativos e não contêm o conteúdo original das obras exibidas.
+                </p>
+                <a class="warning__ancora" href="https://github.com/joaopedromotta">Acesse meu github</a>
+                <button class="warning__button" id="botao__aviso">Fechar</button>
+            </div>
+        </section>
+
+    </main>
+    <footer class="rodape">
+        <p>Desenvolvido por <a href="https://github.com/joaopedromotta">Jhones</a></p>
+    </footer>
+</body>
+<script type="module" src="./script/main.js"></script>
+<script type="module" src="./script/api.js"></script>
+<script type="module" src="./script/ui.js"></script>
+</html>

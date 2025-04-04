@@ -1,0 +1,76 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "publisher": "T. Egerton",
+      "release_date": "1813-01-28",
+      "cover_image": "./assets/imagens/capas-de-livros/pride-and-prejudice.jpg",
+      "book_url": "./assets/livros/teste-de-livro.pdf"
+    },
+    {
+      "id": "2",
+      "title": "Moby-Dick",
+      "author": "Herman Melville",
+      "publisher": "Harper & Brothers",
+      "release_date": "1851-10-18",
+      "cover_image": "./assets/imagens/capas-de-livros/moby-dick.jpg",
+      "book_url": "./assets/livros/teste-de-livro.pdf"
+    },
+    {
+      "id": "3",
+      "title": "The Adventures of Sherlock Holmes",
+      "author": "Arthur Conan Doyle",
+      "publisher": "George Newnes",
+      "release_date": "1892-10-14",
+      "cover_image": "./assets/imagens/capas-de-livros/sherlock-holmes.jpg",
+      "book_url": "./assets/livros/teste-de-livro.pdf"
+    },
+    {
+      "id": "4",
+      "title": "Frankenstein",
+      "author": "Mary Shelley",
+      "publisher": "Lackington, Hughes, Harding, Mavor & Jones",
+      "release_date": "1818-01-01",
+      "cover_image": "./assets/imagens/capas-de-livros/frankenstein.jpg",
+      "book_url": "./assets/livros/teste-de-livro.pdf"
+    },
+    {
+      "id": "5",
+      "title": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde",
+      "publisher": "Ward, Lock & Co.",
+      "release_date": "1890-06-20",
+      "cover_image": "./assets/imagens/capas-de-livros/the-picture-of-dorian-gray.jpg",
+      "book_url": "./assets/livros/teste-de-livro.pdf"
+    },
+    {
+      "id": "6",
+      "title": "Dracula",
+      "author": "Bram Stoker",
+      "publisher": "Archibald Constable and Company",
+      "release_date": "1897-05-26",
+      "cover_image": "./assets/imagens/capas-de-livros/dracula.jpg",
+      "book_url": "./assets/livros/teste-de-livro.pdf"
+    },
+    {
+      "id": "7",
+      "title": "The Time Machine",
+      "author": "H. G. Wells",
+      "publisher": "Heinemann",
+      "release_date": "1895-05-07",
+      "cover_image": "./assets/imagens/capas-de-livros/the-time-machine.jpg",
+      "book_url": "./assets/livros/teste-de-livro.pdf"
+    },
+    {
+      "id": "8",
+      "title": "Alice's Adventures in Wonderland",
+      "author": "Lewis Carroll",
+      "publisher": "Macmillan",
+      "release_date": "1865-11-26",
+      "cover_image": "./assets/imagens/capas-de-livros/alice's-adventures-in-wonderland.jpg",
+      "book_url": "./assets/livros/teste-de-livro.pdf"
+    }
+  ]
+}
