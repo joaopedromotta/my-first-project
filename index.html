@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-context="estante">
+<html lang="pt-BR" data-context="estante" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,14 +51,13 @@
                 </ul>
             </div> -->
 
-
             <div class="cabecalho__pesquisa">
                 <img src="./assets/imagens/pagina/search.svg" alt="">
                 <input type="search" id="buscador__livro" class="cabecalho__pesquisa-input" placeholder="Busque por um livro aqui">
             </div>
 
-            <button class="cabecalho__publicar" id="botao__publicar">
-                Publicar livro
+            <button class="cabecalho__modo" id="botao__modo">
+                <img src="./assets/imagens/pagina/dark-mode.svg" alt="Modo claro" id="img__modo">
             </button>
 
         </nav>
@@ -119,6 +118,10 @@
                 </div>
             </div>          
         </section>
+
+        <button class="btn-theme">
+            <img src="./assets/imagens/pagina/dark-mode.svg" alt="Modo claro" id="img__modo">
+        </button>
 
         <section class="secao__publicar desfoque" id="aviso">
             <div class="container__warning">

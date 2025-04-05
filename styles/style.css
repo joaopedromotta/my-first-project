@@ -1,13 +1,24 @@
 :root {
-    --color-background: #07070A; /* Cor de fundo principal */
-    --color-primary: #24242B; /* Cor primária */
-    --color-secondary: #4A525A; /* Cor secundária */
-    --color-accent: #004BA8; /* Cor de destaque */
-    --color-highlight: #3E78B2; /* Cor de realce */
-    --color-fonte: white;
-    
     --montserrat: "montserrat", sans;
+
+    
 }
+[data-theme="light"]{
+    --color-background: #F2EFE7; /* Cor de fundo principal */
+    --color-primary: #9ACBD0; /* Cor primária */
+    --color-secondary: #48A6A7; /* Cor secundária */
+    --color-accent: #006A71; /* Cor de destaque */
+    --color-highlight: #1a2c2c; /* Cor de realce */
+    --color-fonte: #1b1a1a;
+}
+[data-theme="dark"]{
+        --color-background: #000d0d; /* Cor de fundo principal */
+        --color-primary: #0f1515; /* Cor primária */
+        --color-secondary: #131a1c; /* Cor secundária */
+        --color-accent: #101a1b; /* Cor de destaque */
+        --color-highlight: #1a2c2c; /* Cor de realce */
+        --color-fonte: #E0E0E0;
+    }
 
 body{
     background-color: var(--color-background);
@@ -16,18 +27,23 @@ body{
 /* INICIO DA BARRA DE NAVEGAÇÃO */
 
 .cabecalho {
+    display: flex;
     background-color: var(--color-primary);
     font-family: var(--montserrat);
     padding: 1.25em;
     margin: 1.5em 1.8em;
     border-radius: 0.6em;
     height: 57px;
+    justify-content: center;
 }
 
 .cabecalho__menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 1em;
+    width: 100vw;
+    max-width: 100%;
 }
 
 .cabecalho__logotipo {
@@ -47,6 +63,7 @@ body{
     background-color: var(--color-secondary);
     border-radius: 1.25em;
     padding: 0.5em;
+    margin: 0 1em;
 }
 
 .cabecalho__pesquisa img {
@@ -69,25 +86,18 @@ body{
     border: none;
 }
 
-/* BOTÃO PUBLICAR */
+/* BOTÃO DARK MODE */
 
-
-.cabecalho__publicar{
-    background: transparent;
-    border: 3px solid var(--color-fonte);
-    padding: 1em;
-    border-radius: 60px;
-    font-size: 1em;
-    color: var(--color-fonte);
-    font-family: var(--montserrat);
-    font-weight: 700;
-    cursor: pointer;
-    
+.cabecalho__modo {
+    border: none;
+    border-radius: 16px;
+    background-color: var(--color-secondary);
+    padding: 4px 16px;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.cabecalho__publicar:hover {
-    background-color: var(--color-secondary);
-    transition: background-color 0.2s linear;
+.cabecalho__modo:hover{
+    background-color: var(--color-primary);
 }
 
 /* CORPO PRINCIPAL */
@@ -357,6 +367,10 @@ body{
     margin-bottom: 0.6em;
 }
 
+.btn-theme{
+    display: none;
+}
+
 /* FIM DO CONTAINER */
 
 
@@ -424,6 +438,24 @@ iframe {
 
 /* CONTAINERS DESABILITADOS*/
 
+/* .cabecalho__publicar{
+    background: transparent;
+    border: 3px solid var(--color-fonte);
+    padding: 1em;
+    border-radius: 60px;
+    font-size: 1em;
+    color: var(--color-fonte);
+    font-family: var(--montserrat);
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+
+.cabecalho__publicar:hover {
+    background-color: var(--color-secondary);
+    transition: background-color 0.2s linear;
+} */
+
 /* 
 .lista-botoes{
     display: flex;
@@ -447,6 +479,8 @@ iframe {
     background-color: var(--color-secondary);
     border-radius: 1em;
 } */
+
+
 @media (max-width: 1024px) {
     .cabecalho__pesquisa-input{
         width: auto;
@@ -494,15 +528,9 @@ iframe {
     .corpo{
         flex-direction: column-reverse;
     }
-    .livros__lista{
-        grid-template-columns: repeat(2, 345px);
-    }
-    
     .cabecalho{
         margin: 1em 0.6em;
     }
-
-
 
     .historico{
         width: auto;
@@ -519,4 +547,47 @@ iframe {
         padding: 1.25em 0.6em 0;
     }
 
+}
+
+@media (max-width: 530px) {
+    .cabecalho{
+        margin: 1em 0.6em;
+        padding: 1.25em 0;
+    }
+
+    .cabecalho__modo{
+        display: none;
+    }
+
+    .secao__livros{
+        position: relative;
+    }
+
+    .btn-theme{
+        display: block;
+        position: fixed;
+        right: 10px;
+        bottom: 7px;
+        background-color: var(--color-secondary);
+        border: 2px solid var(--color-highlight);
+        border-radius: 20px;
+    }
+
+    .livros__titulo{
+        margin-bottom: 1em;
+    }
+
+    .container__livro{
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    .item-livro{
+        padding: 1.25em 0.6em;
+        margin: 1.5em 0.3em;
+    }
+    .item-livro img{
+        width: 150px;
+        height: 250px;
+    }
 }

@@ -2,12 +2,12 @@ import api from "./api.js"
 import ui from "./ui.js";
 
 // Variaveis
-const htmlDataContexto = document.querySelector("html")
+const html = document.querySelector("html")
 const buscadorLivros = document.getElementById("buscador__livro");
 const secaoLivros = document.getElementById("secao__livros");
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const qualContexto = htmlDataContexto.dataset.context;
+    const qualContexto = html.dataset.context;
     if( qualContexto === "leitura"){
         api.pegaURL()
         return
@@ -45,10 +45,25 @@ document.addEventListener("DOMContentLoaded", async () => {
         buscadorLivros.addEventListener("input", manipularBusca)
         
         
-        document.getElementById("botao__publicar").addEventListener("click", () => {
-            alert("A função de publicar está desativado por enquanto!")
-            // document.getElementById("container__publicacao").classList.remove("hidden");
-        })
+        // document.getElementById("botao__publicar").addEventListener("click", () => {
+        //     alert("A função de publicar está desativado por enquanto!")
+        //     document.getElementById("container__publicacao").classList.remove("hidden");
+        // })
+
+        function trocarTema() {
+            html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
+          
+            const novaImagem = html.dataset.theme === "dark"
+            ? "./assets/imagens/pagina/light_mode.svg"
+            : "./assets/imagens/pagina/dark-mode.svg";
+          
+            document.querySelectorAll(".btn-theme img, .cabecalho__modo img").forEach(img => {
+              img.setAttribute("src", novaImagem);
+            });
+          }
+
+          document.querySelector(".cabecalho__modo").addEventListener("click", trocarTema)
+          document.querySelector(".btn-theme").addEventListener("click", trocarTema)
         
         document.getElementById("botao__fechar").addEventListener("click", () => {
             document.getElementById("container__publicacao").classList.add("hidden")
