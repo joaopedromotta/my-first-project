@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             const buscarValor = buscadorLivros.value
             try{
                 const livrosFiltro = await api.buscarLivroAPI(buscarValor);
+                const livroVazio = document.getElementById("livroVazio")
+                if(livroVazio){
+                    livroVazio.remove()
+                }
                 if (livrosFiltro.length <= 0) {
                     const listaLivros = document.getElementById("lista__livros");
                 
